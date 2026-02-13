@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Рамазан 30 күндік ігі амалдар</title>
+    <link rel="icon" type="image/png" href="assets/Frame 49.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-top">
+          <h1 class="hero-title">30 күндік ізгі амалдар</h1>
+          <p class="hero-quote">
+            «Ораза, намаз, зекет, қаж – талассыз іс, <br />
+            Жақсы болсаң, жақсы тұт бәрін тегіс»
+          </p>
+          <p class="hero-author">Хәкім Абай атамыз</p>
+        </div>
+
+        <div class="hero-cluster">
+          <span class="hero-label hero-label--top-left">Құран</span>
+          
+          <span class="hero-label hero-label--bottom-left">Салауат</span>
+          <span class="hero-label hero-label--bottom-right">Тарауық</span>
+
+          <div class="hero-lines hero-lines--vertical"></div>
+          
+         
+          
+
+          <div class="hero-node hero-node--top">
+            <!-- Құран иконкасы – кейін assets-тен қоюға болады -->
+            <img src="assets/Frame 52.png" alt="Құран" class="hero-node-icon">
+          </div>
+          <div class="hero-node hero-node--right">
+            <!-- Ай күндері иконкасы -->
+            <img src="assets/Frame 53.png" alt="Ай күндері" class="hero-node-icon">
+          </div>
+          <div class="hero-node hero-node--bottom">
+            <!-- Тарауық иконкасы -->
+            <img src="assets/Frame 49.png" alt="Тарауық" class="hero-node-icon">
+          </div>
+          <div class="hero-node hero-node--left">
+            <!-- Салауат иконкасы -->
+            <img src="assets/Frame 48.png" alt="Салауат" class="hero-node-icon">
+          </div>
+          <div class="hero-node hero-node--center">
+            <span class="hero-center-range">01–30</span>
+            <span id="today-label" class="hero-center-day">1-күн</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="day-picker-section">
+          <h2 class="section-title">Күнді таңдаңыз</h2>
+          <div class="day-picker" id="day-picker"></div>
+        </section>
+
+        <section class="tasks-section">
+          <div class="section-title-with-icon">
+            
+            <h2 class="section-title">Күннің амалы</h2>
+            <img src="assets/Frame 49.png" alt="" class="section-title-icon" />
+          </div>
+          <div id="task-list" class="task-list"></div>
+        </section>
+
+        <section class="duas-section">
+          <h2 class="section-title">Дұғалар</h2>
+
+          <div class="dua-block fade-in">
+            <p class="dua-heading">Сәресіде айтылатын дұға:</p>
+            <p class="dua-arabic">
+              نَوَيْتُ أَنْ أَصُومَ صَوْمَ شَهْرِ رَمَضَانَ مِنَ الْفَجْرِ إِلَى الْمَغْرِبِ
+              خَالِصًا لِلَّهِ تَعَالَى
+            </p>
+            <p class="dua-label">
+              Оқылуы: «Нәуәйтү ан әсума саумә шәһри рамадана минәл фәжри иләл мағрипи халисан
+              лилләһи тағала».
+            </p>
+            <p class="dua-translation">
+              Мағынасы: «Таңертеннен кешке дейін Алланың разылығы үшін Рамазан айының оразасын
+              ұстауға ниет еттім».
+            </p>
+          </div>
+
+          <div class="dua-block fade-in fade-in-delayed">
+            <p class="dua-heading">Ауызашарда оқылатын дұға:</p>
+            <p class="dua-arabic">
+              اَللّٰهُمَّ لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَيْكَ تَوَكَّلْتُ وَعَلَى رِزْقِكَ
+              أَفْطَرْتُ فَتَقَبَّلْ مِنِّي إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ
+            </p>
+            <p class="dua-label">
+              Оқылуы: «Аллаһуммә ләкә сумту уә бика әмәнту уә ғаләйкә тәуәккәлту уә ғалә
+              ризқики әфтарту...».
+            </p>
+            <p class="dua-translation">
+              Мағынасы: «Алла Тағалам! Сенің разылығың үшін ораза ұстап, Сенің берген рызығыңмен
+              аузымды аштым. Саған иман етіп, Саған тәуекел еттім. Менің осы амалдарымды
+              қабыл ете көр».
+            </p>
+          </div>
+
+          <div class="dua-block fade-in">
+            <p class="dua-heading">Тарауих намазының тәсбихы</p>
+            <p class="dua-arabic">
+              سُبْحَانَ ذِي الْمُلْكِ وَالْمَلَكُوتِ، سُبْحَانَ ذِي الْعِزَّةِ وَالْعَظَمَةِ
+              وَالْهَيْبَةِ وَالْقُدْرَةِ وَالْكِبْرِيَاءِ وَالْجَبَرُوتِ، سُبْحَانَ
+              الْمَلِكِ الْحَيِّ الَّذِي لَا يَنَامُ وَلَا يَمُوتُ أَبَدًا، سُبُّوحٌ قُدُّوسٌ
+              رَبُّنَا وَرَبُّ الْمَلَائِكَةِ وَالرُّوحِ، لَا إِلٰهَ إِلَّا اللّٰهُ نَسْأَلُكَ
+              الْجَنَّةَ وَنَعُوذُ بِكَ مِنَ النَّارِ
+            </p>
+            <p class="dua-translation">
+              Аудармасы: «Патшалық және мүліктер иесі Алла пәк. Үстемдік, ұлықтық, қуат, теңдік
+              және естемдік иесі Алла пәк. Өлмейтін, мәңгі тірі Патша Алла пәк. Раббымыз, періштелер
+              Раббысы, ар-Рух Раббысы пәк. Алладан басқа құдай жоқ. Аллам! Сенен жәннат нәсіп етіп,
+              тозақ отынан сақта деп сиынамыз».
+            </p>
+          </div>
+
+          <p class="dua-footer">Оразамыз қабыл болсын!</p>
+          <p class="dua-authors">
+            Жасағандар:
+            <span class="dua-author-name">Ернар Әби</span>,
+            <span class="dua-author-name">Махаббат Рабаева</span>
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
